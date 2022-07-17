@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 bgdark py-2">
+            <div class="search d-flex">
+              <i class="fas fa-search"></i>
+              <input
+                id="inp-search"
+                onkeyup="search()"
+                type="text"
+                aria-label="/"
+                class="form-control w-75 m-auto bg-transparent"
+                placeholder="Search For Place"
+              />
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+          </div>
+          <div class="col-8">
+            <div
+              class="right-side d-flex align-items-center justify-content-between"
+            >
+              <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Weather</a>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"
+                          >Home</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#photo">Photo</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="box"></div>
+      </div>
+    </section>
+
+    <!-- Photo section -->
+    <section class="photo" id="photo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="image">
+              <img src="./img/1.jpg" class="img-fluid" alt="" />
+              <div class="overlay text-center d-flex align-items-center justify-content-center ">
+                <div class="info ">
+                  <h2>Photo Desc.</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Blanditiis reprehenderit, alias optio delectus aspernatur
+                    veniam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image">
+              <img src="./img/2.jpg" class="img-fluid" alt="" />
+              <div class="overlay text-center d-flex align-items-center justify-content-center ">
+                <div class="info">
+                  <h2>Photo Desc.</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Blanditiis reprehenderit, alias optio delectus aspernatur
+                    veniam.
+                  </p>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-md-4">
+            <div class="image">
+              <img src="./img/3.jpg" class="img-fluid" alt="" />
+              <div class="overlay text-center d-flex align-items-center justify-content-center ">
+                <div class="info">
+                  <h2>Photo Desc.</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Blanditiis reprehenderit, alias optio delectus aspernatur
+                    veniam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image">
+              <img src="./img/4.jpg" class="img-fluid" alt="" />
+              <div class="overlay text-center d-flex align-items-center justify-content-center ">
+                <div class="info">
+                  <h2>Photo Desc.</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Blanditiis reprehenderit, alias optio delectus aspernatur
+                    veniam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image">
+              <img src="./img/5.jpg" class="img-fluid" alt="" />
+              <div class="overlay text-center d-flex align-items-center justify-content-center ">
+                <div class="info">
+                  <h2>Photo Desc.</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Blanditiis reprehenderit, alias optio delectus aspernatur
+                    veniam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image">
+              <img src="./img/6.jpg" class="img-fluid" alt="" />
+              <div class="overlay text-center d-flex align-items-center justify-content-center ">
+                <div class="info">
+                  <h2>Photo Desc.</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Blanditiis reprehenderit, alias optio delectus aspernatur
+                    veniam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contact" id="contact">
+      <div class="container" >
+        <div class="row">
+          <div class="col-6 text_contact">
+            <div class="row">
+              <div class="col-6">
+                <p>contact</p>
+                <p style="margin-top: -25px; margin-right: -44px" class="special">us</p>
+              </div>
+              <div class="col-6 right_line"></div>
+            </div>
+          </div>
+          <div class="col-6 form">
+            <form>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="email"
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+          </div>
+          <div class="tringle"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
