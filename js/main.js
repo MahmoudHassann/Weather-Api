@@ -1,16 +1,25 @@
-let request = new XMLHttpRequest
+// let request = new XMLHttpRequest
 let current = []
 let images = []
 let inpSearch = document.getElementById("inp-search")
-request.open("GET", "http://api.weatherapi.com/v1/forecast.json?key=a04493c4f4114db4a51195955221206&days=7&q=Cairo")
-request.send()
-request.addEventListener("readystatechange", function () {
-  if (request.readyState == 4 && request.status == 200) {
-    current = JSON.parse(request.response);
-    display(current)
-    console.log(current)
-  }
-})
+// request.open("GET", "http://api.weatherapi.com/v1/forecast.json?key=a04493c4f4114db4a51195955221206&days=7&q=Cairo")
+// request.send()
+// request.addEventListener("readystatechange", function () {
+//   if (request.readyState == 4 && request.status == 200) {
+//     current = JSON.parse(request.response);
+//     display(current)
+//    /*  console.log(current) */
+//   }
+// })
+async function getData() {
+  let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=a04493c4f4114db4a51195955221206&days=7&q=Cairo`)
+  let data = (await response.json());
+  console.log(data);
+  display(data)
+}
+(async function () {
+  await getData()
+})()
 
 function display(x) {
   let temp = ''
