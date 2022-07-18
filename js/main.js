@@ -195,8 +195,17 @@ function display(x) {
 function search() {
   let searchVlaue = inpSearch.value
   console.log(inpSearch);
-  request.open("GET", `http://api.weatherapi.com/v1/forecast.json?key=a04493c4f4114db4a51195955221206&days=7&q=${searchVlaue}`)
-  request.send()
+async function getData() {
+  let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=a04493c4f4114db4a51195955221206&days=7&q=${searchVlaue}`)
+  let data = (await response.json());
+  console.log(data);
+  display(data)
+}
+(async function () {
+  await getData()
+})()
+  //request.open("GET", `http://api.weatherapi.com/v1/forecast.json?key=a04493c4f4114db4a51195955221206&days=7&q=${searchVlaue}`)
+  //request.send()
 }
 
 
